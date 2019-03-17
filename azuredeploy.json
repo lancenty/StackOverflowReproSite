@@ -28,7 +28,7 @@
       "properties": {},
       "dependsOn": [],
       "sku": "S1"
-    }
+    },
     {
       "apiVersion": "2016-03-01",
       "name": "[parameters('siteName')]",
