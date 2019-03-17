@@ -23,8 +23,8 @@
       "apiVersion": "2017-08-01",
       "type": "Microsoft.Web/serverfarms",
       "kind": "app",
-      "name": "[variables('appServicePlanName')]",
-      "location": "[parameters('location')]",
+      "name": "[parameters('hostingPlanName')]",
+      "location": "[parameters('siteLocation')]",
       "properties": {},
       "dependsOn": [],
       "sku": "S1"
