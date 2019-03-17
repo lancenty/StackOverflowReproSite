@@ -2,6 +2,13 @@
   "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
   "contentVersion": "1.0.0.0",
   "parameters": {
+    "sku":{
+      "type": "string",
+      "defaultValue" : "S1",
+      "metadata": {
+        "description": "The SKU of App Service Plan, by defaut is standard S1"
+      }
+    },
     "siteName": {
       "type": "string"
     },
@@ -27,7 +34,9 @@
       "location": "[parameters('siteLocation')]",
       "properties": {},
       "dependsOn": [],
-      "sku": "S1"
+      "sku": {
+        "name": "[parameters('sku')]"
+      }
     },
     {
       "apiVersion": "2016-03-01",
