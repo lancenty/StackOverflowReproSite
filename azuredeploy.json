@@ -20,13 +20,14 @@
   },
   "resources": [
     {
-      "apiVersion": "2016-03-01",
+      "apiVersion": "2014-06-01",
       "name": "[parameters('hostingPlanName')]",
       "type": "Microsoft.Web/serverFarms",
       "location": "[parameters('siteLocation')]",
       "properties": {
         "name": "[parameters('hostingPlanName')]",
-        "sku": "S1",
+        "sku": "Standard",
+        "workerSize": "0",
         "numberOfWorkers": 1
       }
     },
